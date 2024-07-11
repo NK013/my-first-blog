@@ -6,3 +6,13 @@ from blog.models import Item
                   
 def shoppinglist(request):
     return render(request, 'blog/shoppinglist.html', {'shoppinglist': Item.objects.all()})
+
+def addItem(request):
+    print("called 1")
+    if request.methord == 'GET':
+        print("called 2")
+        itemname = request.GET.get('itemname-input')
+        number = request.GET.get('number-input')
+        print("Doing...")
+        Item.objects.update(itemname, number)
+        print("Done!")
