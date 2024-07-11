@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website</title>
+    </head>
+    
+    <body>
+
+        <h1><a href="/" id="title">Einkaufsliste</a></h1>
+
+        <div>
+            <table class="table">
+                <thead>
+                  <th>Itemname</th>
+                  <th>Amount</th>
+                </thead>
+                <tbody>
+                    {% block content %}
+                    {% endblock %}
+                </tbody>
+              </table>
+        </div>
+
+    </body>
+
+</html>

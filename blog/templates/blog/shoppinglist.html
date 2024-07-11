@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+    {% for item in shoppinglist %}
+        <tr id="{{ item.itemname }}">
+            <td>{{ item.itemname }}</td>
+            <td>{{ item.number }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
